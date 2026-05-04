@@ -20,9 +20,9 @@ Os testes de interface cobrem o fluxo principal do usuário dentro da aplicaçã
 
 Valida o cadastro de um novo usuário, garantindo que o processo é concluído com sucesso.
 
-Login
+(2) Login
 
-(2) Verifica se o usuário consegue se autenticar e acessar o sistema corretamente.
+Verifica se o usuário consegue se autenticar e acessar o sistema corretamente.
 
 <b>Interação com Editais</b>
 
