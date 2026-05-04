@@ -47,6 +47,7 @@ Testa o cálculo automático de valores na calculadora de lotes, garantindo prec
   npx playwright test tests/ui
   
   <b>Testes de API</b>
+  
   Cenário cobertos
   
   CRUD completo para editais/lotes:
