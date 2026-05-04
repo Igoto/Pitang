@@ -82,6 +82,7 @@ Testa o cálculo automático de valores na calculadora de lotes, garantindo prec
    npm install --save-dev @types/node
    
   <b> Executando tudo </b>
+  
    npx playwright test
    
    
