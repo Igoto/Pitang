@@ -42,10 +42,6 @@ Valida a regra de negócio onde apenas editais com data limite maior ou igual à
 Calcular lotes (calculadora)
 Testa o cálculo automático de valores na calculadora de lotes, garantindo precisão nos resultados exibidos.
   
-  
-  Validação dos editais exibidos na tela inicial.
-  O teste verifica se apenas editais dentro do prazo permitem interação com o botão de detalhes.
-  
  <b>Como rodar</b>
   
   npx playwright test tests/ui
@@ -70,14 +66,19 @@ Testa o cálculo automático de valores na calculadora de lotes, garantindo prec
    rode:
    npm install --save-dev @types/node
    
-   Executando tudo
-   npx playwright testRelatório
+  <b> Executando tudo </b>
+   npx playwright test
+   
+   
+   <b>Relatório</b>
    
    npx playwright show-report
    
-   ObservaçõesAlguns endpoints da API (POST, PUT e DELETE) estão retornando erro 500 no momento.
+   <b>Observações:</b>
+   
+   Alguns endpoints da API (POST, PUT e DELETE) estão retornando erro 500 no momento.
+   
    Isso não impede a execução dos testes, mas indica que existe um problema no backend que precisa ser tratado.
-   Possíveis melhoriasorganizar melhor os testes usando Page Objectgerar dados dinâmicosadicionar execução automática em CI/CDmockar API para cenários mais controlados
    
    Objetivo
    Esse projeto foi feito como prática de automação para a vaga de QA na Pitang, focando mais em lógica e validação do que apenas em clicar na interface.
