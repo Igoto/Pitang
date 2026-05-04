@@ -1,3 +1,4 @@
+<img width="1536" height="1024" alt="automacao_UI" src="https://github.com/user-attachments/assets/a08d1622-1157-4223-b427-d3dd31ff1281" />
 README.md
 
 Automação de Testes com Playwright
