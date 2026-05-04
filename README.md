@@ -22,24 +22,24 @@ Valida o cadastro de um novo usuário, garantindo que o processo é concluído c
 
 Login
 
-(2)Verifica se o usuário consegue se autenticar e acessar o sistema corretamente.
+(2) Verifica se o usuário consegue se autenticar e acessar o sistema corretamente.
 
 <b>Interação com Editais</b>
 
-(3)Selecionar um edital
+(3) Selecionar um edital
 Garante que é possível acessar os detalhes de um edital específico e que as informações exibidas estão corretas.
 
-(4)Pesquisar editais.
+(4) Pesquisar editais.
 
 Valida o funcionamento da busca por termo ou número, retornando apenas resultados relevantes.
 
 
-(5)Filtrar editais.
+(5) Filtrar editais.
 Testa os filtros disponíveis, garantindo que a listagem é atualizada conforme os critérios aplicados.
 
 <b>Ordenação e Regras de Negócio</b>
 
-(6)Buscar por maior data limite
+(6) Buscar por maior data limite
 Verifica se a ordenação por data funciona corretamente (ex: editais mais recentes primeiro).
 
 (7) Verificar editais ativos.
