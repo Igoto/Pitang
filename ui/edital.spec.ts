@@ -211,6 +211,74 @@ await page.waitForTimeout(20000);
 });
 
 
+function parseDataBR(data: string): Date {
+  const [dia, mes, ano] = data.split('/').map(Number);
+  return new Date(ano, mes - 1, dia);
+}
+
+test('verifica os editais ativos', async ({ page }) => {
+test.setTimeout(120000); 
+
+ await page.goto('https://jornallicitante.vercel.app/');
+
+   await page.getByText('Entrar').click();
+
+  await page.waitForTimeout(3000);
+
+  await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
+
+
+  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+
+  await page.waitForTimeout(1000);
+  await page.locator("#password-field").fill('igor2026@');
+  await page.waitForTimeout(1000);
+
+  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+  await page.waitForTimeout(5000);
+
+
+  const editais = page.locator('div.rounded-xl.border');
+  const total = await editais.count();
+
+  //const hoje = new Date();
+  const hoje = new Date(2026, 2, 1);
+
+  hoje.setHours(0, 0, 0, 0);
+
+  for (let i = 0; i < total; i++) {
+    const edital = editais.nth(i);
+
+    const dataTexto = await edital.locator('span')
+      .filter({ hasText: 'Data Limite' })
+      .textContent();
+
+    if (!dataTexto) continue;
+
+    const dataLimiteStr = dataTexto.replace('Data Limite:', '').trim();
+    const dataLimite = parseDataBR(dataLimiteStr);
+
+    console.log(`Edital ${i} → ${dataLimiteStr}`);
+
+    if (dataLimite.getTime() >= hoje.getTime()) {
+      console.log(`O Edital ${i} está ativo — clicando no botão`);
+
+
+
+      await page.getByRole('button', { name: 'Ver Detalhes' }).nth(i).click();
+
+      await page.waitForTimeout(3000);
+
+
+      await page.locator('.sr-only').click();//close popup
+      await page.waitForTimeout(2000);
+
+      await page.goBack();//continue loop
+    }
+  }
+});
+
+
 test('calcular lotes de calculadora', async ({ page }) => {
   await page.goto('https://jornallicitante.vercel.app/');
 
