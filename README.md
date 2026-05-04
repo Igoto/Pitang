@@ -15,12 +15,14 @@ Esse projeto foi criado para testar tanto a interface quanto a API da aplicaçã
 Os testes de interface cobrem o fluxo principal do usuário dentro da aplicação, desde o acesso inicial até interações mais específicas com os editais.
 
 <b>Autenticação</b>
+
 Criar conta de usuário
 Valida o cadastro de um novo usuário, garantindo que o processo é concluído com sucesso.
 Login
 Verifica se o usuário consegue se autenticar e acessar o sistema corretamente.
 
 <b>Interação com Editais</b>
+
 Selecionar um edital
 Garante que é possível acessar os detalhes de um edital específico e que as informações exibidas estão corretas.
 Pesquisar editais
@@ -29,12 +31,14 @@ Filtrar editais
 Testa os filtros disponíveis, garantindo que a listagem é atualizada conforme os critérios aplicados.
 
 <b>Ordenação e Regras de Negócio</b>
+
 Buscar por maior data limite
 Verifica se a ordenação por data funciona corretamente (ex: editais mais recentes primeiro).
 Verificar editais ativos
 Valida a regra de negócio onde apenas editais com data limite maior ou igual à data atual são considerados ativos.
 
 <b>Funcionalidade adicional</b>
+
 Calcular lotes (calculadora)
 Testa o cálculo automático de valores na calculadora de lotes, garantindo precisão nos resultados exibidos.
   
@@ -42,13 +46,13 @@ Testa o cálculo automático de valores na calculadora de lotes, garantindo prec
   Validação dos editais exibidos na tela inicial.
   O teste verifica se apenas editais dentro do prazo permitem interação com o botão de detalhes.
   
-  Como rodar
+ <b>Como rodar</b>
   
   npx playwright test tests/ui
   
-  Testes de API
+  <b>Testes de API</b>
   Cenário cobertos
-  CRUD completo de lotes:
+  CRUD completo para editais/lotes:
   criação
   consulta
   atualização
