@@ -1,6 +1,3 @@
-<img width="1536" height="1024" alt="automacao_UI" src="https://github.com/user-attachments/assets/a08d1622-1157-4223-b427-d3dd31ff1281" />
-README.md
-
 Automação de Testes com Playwright
 
 Esse projeto foi criado para testar tanto a interface quanto a API da aplicação de editais.
@@ -51,3 +48,5 @@ Esse projeto foi criado para testar tanto a interface quanto a API da aplicaçã
    
    Objetivo
    Esse projeto foi feito como prática de automação para a vaga de QA na Pitang, focando mais em lógica e validação do que apenas em clicar na interface.
+
+   <img width="1536" height="1024" alt="automacao_UI" src="https://github.com/user-attachments/assets/a08d1622-1157-4223-b427-d3dd31ff1281" />
