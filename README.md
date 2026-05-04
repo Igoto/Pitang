@@ -49,9 +49,13 @@ Testa o cálculo automático de valores na calculadora de lotes, garantindo prec
   <b>Testes de API</b>
   Cenário cobertos
   CRUD completo para editais/lotes:
+  
   criação
+  
   consulta
+  
   atualização
+  
   remoção
   
   <b>Como rodar</b>
