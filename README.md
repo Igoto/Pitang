@@ -17,25 +17,32 @@ Os testes de interface cobrem o fluxo principal do usuário dentro da aplicaçã
 <b>Autenticação</b>
 
 Criar conta de usuário
-Valida o cadastro de um novo usuário, garantindo que o processo é concluído com sucesso.
+
+(1) Valida o cadastro de um novo usuário, garantindo que o processo é concluído com sucesso.
+
 Login
-Verifica se o usuário consegue se autenticar e acessar o sistema corretamente.
+
+(2)Verifica se o usuário consegue se autenticar e acessar o sistema corretamente.
 
 <b>Interação com Editais</b>
 
 Selecionar um edital
-Garante que é possível acessar os detalhes de um edital específico e que as informações exibidas estão corretas.
-Pesquisar editais
-Valida o funcionamento da busca por termo ou número, retornando apenas resultados relevantes.
-Filtrar editais
-Testa os filtros disponíveis, garantindo que a listagem é atualizada conforme os critérios aplicados.
+(3) Garante que é possível acessar os detalhes de um edital específico e que as informações exibidas estão corretas.
+Pesquisar editais.
+
+(4) Valida o funcionamento da busca por termo ou número, retornando apenas resultados relevantes.
+Filtrar editais.
+
+(5) Testa os filtros disponíveis, garantindo que a listagem é atualizada conforme os critérios aplicados.
 
 <b>Ordenação e Regras de Negócio</b>
 
 Buscar por maior data limite
-Verifica se a ordenação por data funciona corretamente (ex: editais mais recentes primeiro).
-Verificar editais ativos
-Valida a regra de negócio onde apenas editais com data limite maior ou igual à data atual são considerados ativos.
+(6) Verifica se a ordenação por data funciona corretamente (ex: editais mais recentes primeiro).
+
+(7) Verificar editais ativos.
+
+(8) Valida a regra de negócio onde apenas editais com data limite maior ou igual à data atual são considerados ativos.
 
 <b>Funcionalidade adicional</b>
 
