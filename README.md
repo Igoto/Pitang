@@ -16,9 +16,9 @@ Os testes de interface cobrem o fluxo principal do usuário dentro da aplicaçã
 
 <b>Autenticação</b>
 
-Criar conta de usuário
+(1) Criar conta de usuário
 
-(1) Valida o cadastro de um novo usuário, garantindo que o processo é concluído com sucesso.
+Valida o cadastro de um novo usuário, garantindo que o processo é concluído com sucesso.
 
 Login
 
@@ -26,27 +26,29 @@ Login
 
 <b>Interação com Editais</b>
 
-Selecionar um edital
-(3) Garante que é possível acessar os detalhes de um edital específico e que as informações exibidas estão corretas.
-Pesquisar editais.
+(3)Selecionar um edital
+Garante que é possível acessar os detalhes de um edital específico e que as informações exibidas estão corretas.
 
-(4) Valida o funcionamento da busca por termo ou número, retornando apenas resultados relevantes.
-Filtrar editais.
+(4)Pesquisar editais.
 
-(5) Testa os filtros disponíveis, garantindo que a listagem é atualizada conforme os critérios aplicados.
+Valida o funcionamento da busca por termo ou número, retornando apenas resultados relevantes.
+
+
+(5)Filtrar editais.
+Testa os filtros disponíveis, garantindo que a listagem é atualizada conforme os critérios aplicados.
 
 <b>Ordenação e Regras de Negócio</b>
 
-Buscar por maior data limite
-(6) Verifica se a ordenação por data funciona corretamente (ex: editais mais recentes primeiro).
+(6)Buscar por maior data limite
+Verifica se a ordenação por data funciona corretamente (ex: editais mais recentes primeiro).
 
 (7) Verificar editais ativos.
 
-(8) Valida a regra de negócio onde apenas editais com data limite maior ou igual à data atual são considerados ativos.
+Valida a regra de negócio onde apenas editais com data limite maior ou igual à data atual são considerados ativos.
 
 <b>Funcionalidade adicional</b>
 
-Calcular lotes (calculadora)
+(8) Calcular lotes (calculadora)
 Testa o cálculo automático de valores na calculadora de lotes, garantindo precisão nos resultados exibidos.
   
  <b>Como rodar</b>
