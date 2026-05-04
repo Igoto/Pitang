@@ -1,4 +1,4 @@
-Automação de Testes com Playwright
+<b>Automação de Testes com Playwright</b>
 
 Esse projeto foi criado para testar tanto a interface quanto a API da aplicação de editais.
   
