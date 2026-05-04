@@ -2,18 +2,13 @@ import { test, expect  } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
 
-
 test.setTimeout(60000); 
 
-test('create an user account', async ({ page }) => {
+test('criar uma conta de usuário', async ({ page }) => {
 
-  await page.goto('https://jornallicitante.vercel.app/');
+await page.goto('https://jornallicitante.vercel.app/');
 
-  
-//  await page.getByText('Entrar').click();
-//await page.getByRole('button', { name: 'Entrar' }).click();
- await expect(page).toHaveTitle('Jornal do Licitante');
-
+await expect(page).toHaveTitle('Jornal do Licitante');
 
 await page.getByText('Entrar').click();
 
@@ -21,12 +16,10 @@ await page.waitForTimeout(3000);
 
 const randomNumber = Math.floor(Math.random() * 10000) + 1;
 
-
 await page.locator("#identifier-field").fill('igor.borges'+randomNumber.toString()+'@hotmail.com');
 
 await page.waitForTimeout(1000);
 
-// Expect a title "to contain" a substring.
 await page.locator('.cl-internal-2iusy0').click(); //click in continue button
 
 await page.waitForTimeout(2000);
@@ -35,9 +28,7 @@ await page.getByText('Sign up').click();
 
 await page.waitForTimeout(2000);
 
-
 await page.locator("#username-field").fill('IgorBorges'+randomNumber.toString());
-
 
 await page.locator("#emailAddress-field").fill('igor.borges'+randomNumber.toString()+'@hotmail.com');
 
@@ -57,7 +48,6 @@ test('login', async ({ page }) => {
 
   await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
 
-
   await page.locator('.cl-internal-2iusy0').click(); //click in continue button
 
   await page.waitForTimeout(1000);
@@ -66,8 +56,6 @@ test('login', async ({ page }) => {
 
   await page.locator('.cl-internal-2iusy0').click(); //click in continue button
   await page.waitForTimeout(3000);
-
-
 });
 
 
@@ -79,7 +67,6 @@ test('selecionar um edital', async ({ page }) => {
   await page.waitForTimeout(3000);
 
   await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
-
 
   await page.locator('.cl-internal-2iusy0').click(); //click in continue button
 
@@ -99,61 +86,52 @@ test('selecionar um edital', async ({ page }) => {
 
 
 test('pesquisar editais', async ({ page }) => {
-  await page.goto('https://jornallicitante.vercel.app/');
+await page.goto('https://jornallicitante.vercel.app/');
 
-   await page.getByText('Entrar').click();
+await page.getByText('Entrar').click();
 
-  await page.waitForTimeout(3000);
+await page.waitForTimeout(3000);
 
-  await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
+await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
 
+await page.locator('.cl-internal-2iusy0').click(); //click in continue button
 
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+await page.waitForTimeout(1000);
+await page.locator("#password-field").fill('igor2026@');
+await page.waitForTimeout(1000);
 
-  await page.waitForTimeout(1000);
-  await page.locator("#password-field").fill('igor2026@');
-  await page.waitForTimeout(1000);
-
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
-  await page.waitForTimeout(2500);
-
+await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+await page.waitForTimeout(2500);
 
 await page.getByPlaceholder('Pesquisar editais por número ou promotor...').fill('Aquisição');
 
 await page.getByText('Carregando editais').waitFor();
 
 await page.waitForTimeout(20000);
-
-
 });
 
 
 test('filtrar editais', async ({ page }) => {
-  await page.goto('https://jornallicitante.vercel.app/');
+await page.goto('https://jornallicitante.vercel.app/');
 
-   await page.getByText('Entrar').click();
+await page.getByText('Entrar').click();
 
-  await page.waitForTimeout(3000);
+await page.waitForTimeout(3000);
 
-  await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
+await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
 
+await page.locator('.cl-internal-2iusy0').click(); //click in continue button
 
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+await page.waitForTimeout(1000);
+await page.locator("#password-field").fill('igor2026@');
+await page.waitForTimeout(1000);
 
-  await page.waitForTimeout(1000);
-  await page.locator("#password-field").fill('igor2026@');
-  await page.waitForTimeout(1000);
-
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
-  await page.waitForTimeout(2500);
-
-
-//await page.getByPlaceholder('Pesquisar editais por número ou promotor...').fill('t');
+await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+await page.waitForTimeout(2500);
 
 await page.getByRole('combobox').click();
 
 await page.waitForTimeout(1000);
-
 
 await page.getByRole('option', { name: 'Maior valor' }).waitFor();
 
@@ -165,36 +143,30 @@ await page.keyboard.press('Enter');
 await page.getByText('Carregando editais').waitFor();
 
 await page.waitForTimeout(20000);
-
-
 });
 
 test('buscar por maior data limite', async ({ page }) => {
-  await page.goto('https://jornallicitante.vercel.app/');
+await page.goto('https://jornallicitante.vercel.app/');
 
-   await page.getByText('Entrar').click();
+await page.getByText('Entrar').click();
 
-  await page.waitForTimeout(3000);
+await page.waitForTimeout(3000);
 
-  await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
-
-
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
-
-  await page.waitForTimeout(1000);
-  await page.locator("#password-field").fill('igor2026@');
-  await page.waitForTimeout(1000);
-
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
-  await page.waitForTimeout(2500);
+await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
 
 
-//await page.getByPlaceholder('Pesquisar editais por número ou promotor...').fill('t');
+await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+
+await page.waitForTimeout(1000);
+await page.locator("#password-field").fill('igor2026@');
+await page.waitForTimeout(1000);
+
+await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+await page.waitForTimeout(2500);
 
 await page.getByRole('combobox').click();
 
 await page.waitForTimeout(1000);
-
 
 await page.getByRole('option', { name: 'Maior Data Limite' }).waitFor();
 
@@ -206,8 +178,6 @@ await page.keyboard.press('Enter');
 await page.getByText('Carregando editais').waitFor();
 
 await page.waitForTimeout(20000);
-
-
 });
 
 
@@ -217,34 +187,32 @@ function parseDataBR(data: string): Date {
 }
 
 test('verifica os editais ativos', async ({ page }) => {
-test.setTimeout(120000); 
+test.setTimeout(200000); 
 
  await page.goto('https://jornallicitante.vercel.app/');
 
-   await page.getByText('Entrar').click();
+ await page.getByText('Entrar').click();
 
-  await page.waitForTimeout(3000);
+ await page.waitForTimeout(3000);
 
-  await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
+ await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
 
+ await page.locator('.cl-internal-2iusy0').click(); //click in continue button
 
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+ await page.waitForTimeout(1000);
+ await page.locator("#password-field").fill('igor2026@');
+ await page.waitForTimeout(1000);
 
-  await page.waitForTimeout(1000);
-  await page.locator("#password-field").fill('igor2026@');
-  await page.waitForTimeout(1000);
+ await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+ await page.waitForTimeout(5000);
 
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
-  await page.waitForTimeout(5000);
+ const editais = page.locator('div.rounded-xl.border');
+ const total = await editais.count();
 
+ //const hoje = new Date(); //se quiser puxar pela data de hoje comenta a próxima linha e descomenta essa
+ const hoje = new Date(2026, 2, 1);
 
-  const editais = page.locator('div.rounded-xl.border');
-  const total = await editais.count();
-
-  //const hoje = new Date();
-  const hoje = new Date(2026, 2, 1);
-
-  hoje.setHours(0, 0, 0, 0);
+ hoje.setHours(0, 0, 0, 0);
 
   for (let i = 0; i < total; i++) {
     const edital = editais.nth(i);
@@ -263,12 +231,9 @@ test.setTimeout(120000);
     if (dataLimite.getTime() >= hoje.getTime()) {
       console.log(`O Edital ${i} está ativo — clicando no botão`);
 
-
-
       await page.getByRole('button', { name: 'Ver Detalhes' }).nth(i).click();
 
       await page.waitForTimeout(3000);
-
 
       await page.locator('.sr-only').click();//close popup
       await page.waitForTimeout(2000);
@@ -280,34 +245,29 @@ test.setTimeout(120000);
 
 
 test('calcular lotes de calculadora', async ({ page }) => {
-  await page.goto('https://jornallicitante.vercel.app/');
+await page.goto('https://jornallicitante.vercel.app/');
 
-   await page.getByText('Entrar').click();
+await page.getByText('Entrar').click();
 
-  await page.waitForTimeout(3000);
+await page.waitForTimeout(3000);
 
-  await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
+await page.locator("#identifier-field").fill('igor.borges@hotmail.com');
 
+await page.locator('.cl-internal-2iusy0').click(); //click in continue button
 
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+await page.waitForTimeout(1000);
+await page.locator("#password-field").fill('igor2026@');
+await page.waitForTimeout(1000);
 
-  await page.waitForTimeout(1000);
-  await page.locator("#password-field").fill('igor2026@');
-  await page.waitForTimeout(1000);
-
-  await page.locator('.cl-internal-2iusy0').click(); //click in continue button
-  await page.waitForTimeout(2500);
-
+await page.locator('.cl-internal-2iusy0').click(); //click in continue button
+await page.waitForTimeout(2500);
 
 await page.getByPlaceholder('Pesquisar editais por número ou promotor...').fill('Aquisição de equipamentos médicos - Edital 012/2024');
 
-//await page.getByText('Carregando editais').waitFor();
-
 await page.waitForTimeout(4000);
 
-  await page.getByRole('button', { name: 'Ver Detalhes' }).click();
-  
-  
+await page.getByRole('button', { name: 'Ver Detalhes' }).click();
+
 await page.waitForTimeout(3000);
 
 const orgaoResponsavel = await page
@@ -334,8 +294,7 @@ const descricao = await page
   .first()
   .innerText();
 
-
-  const titulo = await page.getByRole('heading', { level: 2 }).innerText();
+const titulo = await page.getByRole('heading', { level: 2 }).innerText();
 console.log(titulo);
 console.log('Órgão Responsável:', orgaoResponsavel.trim());
 console.log('Data Limite:', dataLimite.trim());
@@ -349,8 +308,6 @@ await page.getByRole('tab', { name: 'Lotes' }).click();
 await expect(
   page.locator('table tbody tr').first()
 ).toBeVisible({ timeout: 15000 });
-
-
 
 const linhas = page.locator('table tbody tr');
 const totalLinhas = await linhas.count();
@@ -375,9 +332,7 @@ for (let i = 0; i < totalLinhas; i++) {
   }
 }
 
-
 let soma = 0;
-
 // ajusta o seletor se o tbody for diferente
 
 for (let i = 0; i < totalLinhas; i++) {
@@ -426,4 +381,3 @@ for (let i = 0; i < total; i++) {
 }
 
 });
-
