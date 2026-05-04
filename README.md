@@ -4,8 +4,11 @@ Automação de Testes com Playwright
 
 Esse projeto foi criado para testar tanto a interface quanto a API da aplicação de editais.
   ├── ui/
+  
   │     └── edital.spec.ts
+  
   ├── api/
+  
   │     └── api.spec.ts
   
   Testes de UI
