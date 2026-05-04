@@ -58,10 +58,12 @@ Testa o cálculo automático de valores na calculadora de lotes, garantindo prec
   atualização
   remoção
   
-  Como rodar
+  <b>Como rodar</b>
+  
   npx playwright test tests/api
   
-  Instalação
+  <b>Instalação</b>
+  
   npm install
   
   Se aparecer erro relacionado a módulos como fs ou path,
