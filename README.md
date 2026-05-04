@@ -10,23 +10,30 @@ Esse projeto foi criado para testar tanto a interface quanto a API da aplicaçã
   
   Testes de UI
   Cenário coberto
+  
   Validação dos editais exibidos na tela inicial.
   O teste verifica se apenas editais dentro do prazo permitem interação com o botão de detalhes.
-  Como rodar npx playwright test tests/ui
+  
+  Como rodar
+  npx playwright test tests/ui
+  
   Testes de API
-  Cenário coberto
+  Cenário cobertos
   CRUD completo de lotes:
   criação
   consulta
   atualização
   remoção
+  
   Como rodar
   npx playwright test tests/api
+  
   Instalação
   npm install
   
   Se aparecer erro relacionado a módulos como fs ou path,
-   rode:npm install --save-dev @types/node
+   rode:
+   npm install --save-dev @types/node
    
    Executando tudo
    npx playwright testRelatório
