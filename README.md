@@ -17,6 +17,7 @@ Esse projeto foi criado para testar tanto a interface quanto a API da aplicaçã
   O teste verifica se apenas editais dentro do prazo permitem interação com o botão de detalhes.
   
   Como rodar
+  
   npx playwright test tests/ui
   
   Testes de API
